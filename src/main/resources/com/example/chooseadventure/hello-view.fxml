@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="600.0" prefWidth="420.0" style="-fx-background-color: #f6edcd;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.chooseadventure.HelloController">
+   <HBox alignment="CENTER_LEFT" minWidth="-Infinity" prefHeight="73.0" prefWidth="420.0" spacing="10.0" style="-fx-background-color: #a8c8a6;">
+      <padding>
+         <Insets left="10.0" />
+      </padding>
+      <ImageView fx:id="playerCharacter" fitHeight="85.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+         <Image url="@no_anim_0.png" />
+      </ImageView>
+      <VBox alignment="CENTER_LEFT" prefHeight="73.0" prefWidth="172.0">
+         <Label fx:id="playerName" text="PlayerName" textFill="#655057">
+            <font>
+               <Font name="Monospaced Bold" size="19.0" />
+            </font>
+         </Label>
+         <ProgressBar prefWidth="200.0" progress="1.0" style="-fx-accent: #cb8175; -fx-box-border: #f6edcd;" />
+      </VBox>
+   </HBox>
+   <TextArea fx:id="gameText" editable="false" layoutY="73.0" prefHeight="388.0" prefWidth="420.0" style="-fx-background-color: #f6edcd; -fx-border-color: #f6edcd; -fx-control-inner-background: #f6edcd;" wrapText="true">
+      <font>
+         <Font name="Monospaced Regular" size="16.0" />
+      </font>
+   </TextArea>
+   <AnchorPane layoutY="461.0" prefHeight="140.0" prefWidth="420.0" style="-fx-background-color: #6d8d8a;">
+      <HBox fx:id="buttonHolder" alignment="CENTER" disable="true" prefHeight="140.0" prefWidth="420.0" spacing="50.0" visible="false">
+         <Button fx:id="option1" mnemonicParsing="false" onAction="#option1Action" prefHeight="85.0" prefWidth="136.0" style="-fx-background-color: #a8c8a6;" text="Option 1" textAlignment="CENTER" textFill="#f6edcd" textOverrun="CLIP" wrapText="true">
+            <font>
+               <Font name="Monospaced Bold" size="14.0" />
+            </font>
+         </Button>
+         <Button fx:id="option2" layoutX="152.0" layoutY="58.0" mnemonicParsing="false" onAction="#option2Action" prefHeight="85.0" prefWidth="136.0" style="-fx-background-color: #cb8175;" text="Option 2" textAlignment="CENTER" textFill="#f6edcd" wrapText="true">
+            <font>
+               <Font name="Monospaced Bold" size="14.0" />
+            </font>
+         </Button>
+      </HBox>
+      <TextField fx:id="nameField" alignment="CENTER" disable="true" layoutX="105.0" layoutY="31.0" prefHeight="35.0" prefWidth="210.0" promptText="Enter your name here" visible="false">
+         <font>
+            <Font name="Monospaced Bold Italic" size="13.0" />
+         </font>
+      </TextField>
+      <Button fx:id="submitName" disable="true" layoutX="159.0" layoutY="74.0" mnemonicParsing="false" onAction="#returnName" prefHeight="35.0" prefWidth="102.0" style="-fx-background-color: #a8c8a6; -fx-border-radius: 40;" text="Submit" textFill="#f6edcd" visible="false">
+         <font>
+            <Font name="Monospaced Bold" size="16.0" />
+         </font>
+      </Button>
+   </AnchorPane>
+</AnchorPane>
